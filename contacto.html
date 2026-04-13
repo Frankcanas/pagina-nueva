@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Tu Tienda de Zapatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Tu Zapatería</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Quiénes Somos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="seccion-titulo">Contáctanos</h2>
+        
+        <div class="contacto-container">
+            
+            <div class="contacto-info">
+                <h3>Visítanos</h3>
+                <p><strong>Dirección:</strong> Cl. 19 #3D-30, Barranquilla, Soledad, Atlántico</p>
+                <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+                <p><strong>Email:</strong> info@tuzapateria.com</p>
+
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1775932317100!6m8!1m7!1sHKWlAalIAbY8b0IUn3QC5w!2m2!1d10.94043068305607!2d-74.77836208689594!3f127.93405022240944!4f-3.4625826324427607!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="contacto-formulario">
+                <h3>Envíanos un mensaje</h3>
+                <form class="form-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Tu Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tu Zapatería. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
