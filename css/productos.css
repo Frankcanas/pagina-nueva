@@ -1,0 +1,467 @@
+.catalogo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* .catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%; 
+    max-height: 1300px;
+    margin: 0 auto;
+    justify-items: center; 
+    align-items: start;
+    width: 100%;
+} */
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 300px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0;
+    max-width: calc(33.33% - 20px);
+    min-width: 280px;
+
+
+}
+
+/* Para tablets (2 columnas) */
+@media (max-width: 1024px) {
+    .card {
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Para móviles (1 columna) */
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+.card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-acento);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover::before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.nike .card::after{
+    content: 'NIKE';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 10rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.adidas .card::after{
+    content: 'ADIDAS';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.puma .card::after{
+    content: 'PUMA';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 9rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.reebok .card::after{
+    content: 'REEBOK';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.card .imgBx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+}
+
+.card:hover .imgBx{
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+    transition: 0.8s;
+}
+
+.card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 0.8s ease-in-out;
+    z-index: 10;
+}
+
+.card:hover .contentBx{
+    height: 210px;
+}
+
+.card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.card .contentBx .size, .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.card .contentBx .size h3, .card .contentBx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card .contentBx .size span:hover {
+    background: var(--color-acento);
+}
+
+.card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.5s;
+}
+
+.card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contacto-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-info p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #555;
+}
+
+
+
+.nav-links a.btn-login-nav {
+    background-color: var(--color-acento); 
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+.nav-links a.btn-login-nav:hover {
+    background-color: #fff;
+    color: var(--color-acento) !important;
+}
+
+
+.navbar-marcas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+
+.navbar-marcas .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-marcas label {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-marcas label::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    margin: 5px auto 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#nike:checked ~ .navbar-marcas label[for="nike"]::after {
+    opacity: 1;
+}
+
+#adidas:checked ~ .navbar-marcas label[for="adidas"]::after {
+    opacity: 1;
+}
+
+#puma:checked ~ .navbar-marcas label[for="puma"]::after {
+    opacity: 1;
+}
+
+#reebok:checked ~ .navbar-marcas label[for="reebok"]::after {
+    opacity: 1;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.navbar-marcas label:hover {
+    color: var(--color-acento);
+}
+
+.nike {
+    display: block;
+}
+
+.adidas, .puma, .reebok {
+    display: none;
+}
+
+
+#nike:checked ~ .nike {
+    display: block;
+}
+
+#nike:checked ~ .adidas {
+    display: none;
+}
+
+#nike:checked ~ .puma {
+    display: none;
+}
+
+#nike:checked ~ .reebok {
+    display: none;
+}
+
+
+#adidas:checked ~ .nike {
+    display: none;
+}
+
+#adidas:checked ~ .adidas {
+    display: block;
+}
+
+#adidas:checked ~ .puma {
+    display: none;
+}
+
+#adidas:checked ~ .reebok {
+    display: none;
+}
+
+#puma:checked ~ .nike {
+    display: none;
+}
+
+#puma:checked ~ .adidas {
+    display: none;
+}
+
+#puma:checked ~ .puma {
+    display: block;
+}
+
+#puma:checked ~ .reebok {
+    display: none;
+}
+
+#reebok:checked ~ .nike {
+    display: none;
+}
+
+#reebok:checked ~ .adidas {
+    display: none;
+}
+
+#reebok:checked ~ .puma {
+    display: none;
+}
+
+#reebok:checked ~ .reebok {
+    display: block;
+}
+
