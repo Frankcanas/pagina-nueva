@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Producto | Tu Tienda de Zapatos</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
 </head>
 <body>
     <header>
@@ -20,6 +22,23 @@
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="login.html" class="btn-login-nav">Login</a></li>
             </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+                <div id="cart-modal" class="cart-modal">
+                    <div class="cart-content">
+                        <span class="close" onclick="toggleCart()">&times;</span>
+                            <h2>Tu Carrito</h2>
+                    <div id="cart-items">
+                </div>
+            <div class="cart-total">
+            Total: $<span id="total-price">0</span>
+                </div>
+                    <button class="btn-checkout">Finalizar Compra</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -38,17 +57,17 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Jordan Blue', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="imgBx">
-                    <img src="img/nike-red.png" alt="Nike Jordan Red">
+                    <img src="img/nike-red.png" alt="Nike Air Max ">
                 </div>
                 <div class="contentBx">
                     <h2>Nike Air Max</h2>
@@ -58,15 +77,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #333"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Max Red', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-force.png" alt="Nike Air Force ">
                 </div>
@@ -78,15 +97,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Force', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-blanco.png" alt="Nike Air Blanco">
                 </div>
@@ -98,15 +117,14 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Blanco', 150000)">Comprar Ahora</a>
                 </div>
             </div>
-
-            <div class="catalogo"> <div class="card">
+                    <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-salmon.png" alt="Nike Air Salmon">
                 </div>
@@ -118,15 +136,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Salmon', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-pegasus.png" alt="Nike Pegasus">
                 </div>
@@ -138,15 +156,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Pegasus', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-dunk.png" alt="Nike Dunk">
                 </div>
@@ -158,15 +176,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Dunk', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-zoom.png" alt="Nike Air Zoom">
                 </div>
@@ -178,15 +196,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Zoom', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-air-blanco.png" alt="Nike Air Blanco">
                 </div>
@@ -198,15 +216,15 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Blanco', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
-            <div class="catalogo"> <div class="card">
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-skate.png" alt="Nike Skate">
                 </div>
@@ -218,11 +236,11 @@
                     </div>
                     <div class="color">
                         <h3>Color :</h3>
-                        <span style="background: #237fea;"></span>
-                        <span style="background: #f00;"></span>
-                        <span style="background: #000"></span>
+                        <span style="background: #f00;" data-color="Rojo"></span>
+                        <span style="background: #237fea;" data-color="Azul"></span>
+                        <span style="background: #333" data-color="Negro"></span>
                     </div>
-                    <a href="#">Comprar Ahora</a>
+                    <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Skate', 150000)">Comprar Ahora</a>
                 </div>
             </div>
 
@@ -234,5 +252,7 @@
     <footer>
         <p>&copy; 2026 Tu zapateria, Todos los derechos reservados</p>
     </footer>
+
+    <script src="js/script.js"></script> </body>
 </body>
 </html>
