@@ -1,3 +1,10 @@
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100%; 
+    overflow-x: hidden; 
+}
+
 :root{
     --color-primario: #333;
     --color-secundario: #f4f4f4;
@@ -16,6 +23,9 @@ body{
     background-color: #fff;
     color: var(--color-primario);
     line-height: 1.6;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
 }
 
 a{
@@ -86,7 +96,9 @@ header{
 }
 
 .hero{
-    background-color: var(--color-secundario);
+    background-image: url('../img/hero.jpg');
+    background-size:contain;
+    background-attachment: scroll;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -95,9 +107,18 @@ header{
     padding: 0 2rem;
 }
 
-.hero-contenido h2{
+.hero-content h2{
+    color: var(--color-secundario);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style:groove;
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.hero-content p{
+    color: var(--color-acento);
+    background-color: rgba(89, 87, 87, 0.5);
+    border-style:groove;
 }
 
 .btn-cta{
@@ -136,9 +157,12 @@ header{
 }
 
 .catalogo{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* .catalogo {
@@ -155,15 +179,35 @@ header{
 } */
 
 .card{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 300px;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 400px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
-    margin: 0 auto;
-    max-width: 320px;
+    margin: 0;
+    max-width: calc(33.33% - 20px);
+    min-width: 280px;
 
+
+}
+
+/* Para tablets (2 columnas) */
+@media (max-width: 1024px) {
+    .card {
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Para móviles (1 columna) */
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
 }
 
 .card:before{
@@ -182,12 +226,45 @@ header{
     clip-path: circle(300px at 80% -20%);
 }
 
-.card::after{
+.nike .card::after{
     content: 'NIKE';
     position: absolute;
     top: 30%;
     left: -20%;
     font-size: 10rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.adidas .card::after{
+    content: 'ADIDAS';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.puma .card::after{
+    content: 'PUMA';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 9rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.reebok .card::after{
+    content: 'REEBOK';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
@@ -399,14 +476,6 @@ header{
 }
 
 
-footer {
-    background-color: var(--color-primario);
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
 
 .nav-links a.btn-login-nav {
     background-color: var(--color-acento); 
@@ -420,3 +489,137 @@ footer {
     background-color: #fff;
     color: var(--color-acento) !important;
 }
+
+
+.navbar-marcas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+
+.navbar-marcas .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-marcas label {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-marcas label::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    margin: 5px auto 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#nike:checked ~ .navbar-marcas label[for="nike"]::after {
+    opacity: 1;
+}
+
+#adidas:checked ~ .navbar-marcas label[for="adidas"]::after {
+    opacity: 1;
+}
+
+#puma:checked ~ .navbar-marcas label[for="puma"]::after {
+    opacity: 1;
+}
+
+#reebok:checked ~ .navbar-marcas label[for="reebok"]::after {
+    opacity: 1;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.navbar-marcas label:hover {
+    color: var(--color-acento);
+}
+
+.nike {
+    display: block;
+}
+
+.adidas, .puma, .reebok {
+    display: none;
+}
+
+
+#nike:checked ~ .nike {
+    display: block;
+}
+
+#nike:checked ~ .adidas {
+    display: none;
+}
+
+#nike:checked ~ .puma {
+    display: none;
+}
+
+#nike:checked ~ .reebok {
+    display: none;
+}
+
+
+#adidas:checked ~ .nike {
+    display: none;
+}
+
+#adidas:checked ~ .adidas {
+    display: block;
+}
+
+#adidas:checked ~ .puma {
+    display: none;
+}
+
+#adidas:checked ~ .reebok {
+    display: none;
+}
+
+#puma:checked ~ .nike {
+    display: none;
+}
+
+#puma:checked ~ .adidas {
+    display: none;
+}
+
+#puma:checked ~ .puma {
+    display: block;
+}
+
+#puma:checked ~ .reebok {
+    display: none;
+}
+
+#reebok:checked ~ .nike {
+    display: none;
+}
+
+#reebok:checked ~ .adidas {
+    display: none;
+}
+
+#reebok:checked ~ .puma {
+    display: none;
+}
+
+#reebok:checked ~ .reebok {
+    display: block;
+}
+

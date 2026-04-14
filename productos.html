@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
@@ -43,9 +44,31 @@
     </header>
 
     <main class="container">
-        <h2 class="seccion-titulo">Nuestro Catalogo</h2>
 
-        <div class="catalogo"> <div class="card">
+        <input type="radio" id="nike" name="marca" checked>
+        <input type="radio" id="adidas" name="marca">
+        <input type="radio" id="puma" name="marca">
+        <input type="radio" id="reebok" name="marca">
+
+        <nav class="navbar-marcas">
+            <div class="logo">
+                <h1>NUESTRAS MARCAS</h1>
+            </div>
+            <div class="nav-links">
+                <label for="nike">Nike</label>
+                <label for="adidas">Adidas</label>
+                <label for="puma">Puma</label>
+                <label for="reebok">Reebok</label>
+            </div>
+        </nav>
+
+
+
+        <section class="nike" id="nike">
+            <h2 class="seccion-titulo">Nuestro Catalogo</h2>
+
+        <div class="catalogo"> 
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-blue.png" alt="Nike Jordan Blue">
                 </div>
@@ -124,7 +147,8 @@
                     <a href="javascript:void(0)" onclick="addToCart(event, 'Nike Air Blanco', 150000)">Comprar Ahora</a>
                 </div>
             </div>
-                    <div class="card">
+
+            <div class="card">
                 <div class="imgBx">
                     <img src="img/nike-salmon.png" alt="Nike Air Salmon">
                 </div>
@@ -246,11 +270,635 @@
 
 
 
-        </div> 
+            </div> 
+
+    </section>
+
+        <section class="adidas" id="adidas">
+            <h2 class="seccion-titulo">Nuestro Catalogo</h2>
+
+            <div class="catalogo"> 
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blue.png" alt="Adidas Ultraboost">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Ultraboost</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Ultraboost', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-red.png" alt="Adidas Superstar">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Superstar</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #c7a86d;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Superstar', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-force.png" alt="Adidas NMD_R1">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas NMD_R1</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas NMD_R1', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blanco.png" alt="Adidas Gazelle">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Gazelle</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #a19d9d;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Gazelle', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-salmon.png" alt="Adidas Samba">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Samba</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Samba', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-pegasus.png" alt="Adidas Adilette">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Adilette</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Adilette', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-dunk.png" alt="Adidas ZX 2K">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas ZX 2K</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas ZX 2K', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-zoom.png" alt="Adidas Campus">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Campus</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Campus', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-air-blanco.png" alt="Adidas Forum">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Forum</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Forum', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-skate.png" alt="Adidas Stan Smith">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Adidas Stan Smith</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Adidas Stan Smith', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div> 
+    </section>
+
+
+        <section class="puma" id="puma">
+            <h2 class="seccion-titulo">Nuestro Catalogo</h2>
+
+            <div class="catalogo"> 
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blue.png" alt="Puma Suede Classic">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Suede Classic</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Suede Classic', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-red.png" alt="Puma RS-X">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma RS-X</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma RS-X', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-force.png" alt="Puma Cali">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Cali</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Cali', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blanco.png" alt="Puma Ignite">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Ignite</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Ignite', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-salmon.png" alt="Puma Future Rider">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Future Rider</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Future Rider', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-pegasus.png" alt="Puma Clyde">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Clyde</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Clyde', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-dunk.png" alt="Puma Deviate Nitro">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Deviate Nitro</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Deviate Nitro', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-zoom.png" alt="Puma Velocity Nitro">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Velocity Nitro</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Velocity Nitro', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-air-blanco.png" alt="Puma Roma">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Roma</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Roma', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-skate.png" alt="Puma Basket">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Puma Basket</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Puma Basket', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div> 
+    </section>
+
+
+        <section class="reebok" id="reebok">
+            <h2 class="seccion-titulo">Nuestro Catalogo</h2>
+
+            <div class="catalogo"> 
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blue.png" alt="Reebok Classic Leather">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Classic Leather</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Classic Leather', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-red.png" alt="Reebok Club C 85">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Club C 85</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Club C 85', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-force.png" alt="Reebok Nano X3">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Nano X3</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Nano X3', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-blanco.png" alt="Reebok Zig Kinetica">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Zig Kinetica</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Zig Kinetica', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-salmon.png" alt="Reebok Instapump Fury">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Instapump Fury</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #f00;"></span>
+                            <span style="background: #fff;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Instapump Fury', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-pegasus.png" alt="Reebok Workout Plus">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Workout Plus</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Workout Plus', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-dunk.png" alt="Reebok Classic Nylon">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Classic Nylon</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #f00;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Classic Nylon', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-zoom.png" alt="Reebok Floatride Energy">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Floatride Energy</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #237fea;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Floatride Energy', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-air-blanco.png" alt="Reebok DMX Series 2200">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok DMX Series 2200</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #000;"></span>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok DMX Series 2200', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="img/nike-skate.png" alt="Reebok Royal Glide">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Reebok Royal Glide</h2>
+                        <div class="size">
+                            <h3>Talla :</h3>
+                            <span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color :</h3>
+                            <span style="background: #fff;"></span>
+                            <span style="background: #000;"></span>
+                            <span style="background: #237fea;"></span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="addToCart(event, 'Reebok Royal Glide', 150000)">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div> 
+    </section>
+
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Tu zapateria, Todos los derechos reservados</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Tu Zapatería</h3>
+                <p>Las mejores zapatillas al mejor precio. Calidad y estilo en cada paso.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo</a></li>
+                    <li><a href="nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">FB</a>
+                    <a href="https://instagram.com" target="_blank">IG</a>
+                    <a href="https://twitter.com" target="_blank">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Tu Zapatería. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script> </body>
