@@ -1,0 +1,126 @@
+/* Icono del carrito en el nav */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+}
+
+/* Modal del carrito */
+.cart-modal {
+    display: none; /* Se activa con JS */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #fff; /* Fondo blanco sólido */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 9999; /* El número más alto para que esté al frente */
+    padding: 20px;
+    overflow-y: auto; /* Por si tienes muchos productos, permite hacer scroll */
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-modal.active {
+    display: block !important;
+}
+
+.cart-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: right;
+    color: var(--color-primario);
+}
+
+.btn-checkout {
+    width: 100%;
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Estilo del botón eliminar */
+.btn-eliminar {
+    background: transparent;
+    border: none;
+    color: #e74c3c; /* Un rojo vibrante */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-eliminar:hover {
+    color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.2); /* Se agranda un poquito */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--color-primario); /* Asegura que sea oscuro */
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10001;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: var(--color-acento); /* Se pone naranja al pasar el mouse */
+}
+
+.size span.selected, .color span.selected {
+    border: 2px solid var(--color-acento) !important;
+    transform: scale(1.1);
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.cart-content h2 { margin-bottom: 20px; color: var(--color-primario); }
+.close { font-size: 2rem; cursor: pointer; float: right; }
