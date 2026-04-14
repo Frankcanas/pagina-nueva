@@ -226,12 +226,45 @@ header{
     clip-path: circle(300px at 80% -20%);
 }
 
-.card::after{
+.nike .card::after{
     content: 'NIKE';
     position: absolute;
     top: 30%;
     left: -20%;
     font-size: 10rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.adidas .card::after{
+    content: 'ADIDAS';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.puma .card::after{
+    content: 'PUMA';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 9rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.reebok .card::after{
+    content: 'REEBOK';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    font-size: 7rem;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
@@ -456,3 +489,137 @@ header{
     background-color: #fff;
     color: var(--color-acento) !important;
 }
+
+
+.navbar-marcas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+
+.navbar-marcas .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-marcas label {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-marcas label::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    margin: 5px auto 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#nike:checked ~ .navbar-marcas label[for="nike"]::after {
+    opacity: 1;
+}
+
+#adidas:checked ~ .navbar-marcas label[for="adidas"]::after {
+    opacity: 1;
+}
+
+#puma:checked ~ .navbar-marcas label[for="puma"]::after {
+    opacity: 1;
+}
+
+#reebok:checked ~ .navbar-marcas label[for="reebok"]::after {
+    opacity: 1;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.navbar-marcas label:hover {
+    color: var(--color-acento);
+}
+
+.nike {
+    display: block;
+}
+
+.adidas, .puma, .reebok {
+    display: none;
+}
+
+
+#nike:checked ~ .nike {
+    display: block;
+}
+
+#nike:checked ~ .adidas {
+    display: none;
+}
+
+#nike:checked ~ .puma {
+    display: none;
+}
+
+#nike:checked ~ .reebok {
+    display: none;
+}
+
+
+#adidas:checked ~ .nike {
+    display: none;
+}
+
+#adidas:checked ~ .adidas {
+    display: block;
+}
+
+#adidas:checked ~ .puma {
+    display: none;
+}
+
+#adidas:checked ~ .reebok {
+    display: none;
+}
+
+#puma:checked ~ .nike {
+    display: none;
+}
+
+#puma:checked ~ .adidas {
+    display: none;
+}
+
+#puma:checked ~ .puma {
+    display: block;
+}
+
+#puma:checked ~ .reebok {
+    display: none;
+}
+
+#reebok:checked ~ .nike {
+    display: none;
+}
+
+#reebok:checked ~ .adidas {
+    display: none;
+}
+
+#reebok:checked ~ .puma {
+    display: none;
+}
+
+#reebok:checked ~ .reebok {
+    display: block;
+}
+
